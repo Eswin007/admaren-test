@@ -3,17 +3,17 @@ import MenuIcon from "@mui/icons-material/Menu";
 import RefreshIcon from "@mui/icons-material/Refresh";
 import AppsIcon from "@mui/icons-material/Apps";
 import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
-import SearchIcon from "@mui/icons-material/Search";
 import ChatIcon from "@mui/icons-material/Chat";
 import TuneIcon from "@mui/icons-material/Tune";
 import profileImage from "../assets/images/profile.jpg";
+import Searchbar from "./other/Searchbar";
 
 const Topbar = () => {
   return (
     <header className="header">
       <div className="header__menu">
         <button type="button" className="header__burger-menu header-link">
-          <MenuIcon />
+          <MenuIcon/>
         </button>
         <button type="button" className="header__reload header-link">
           <RefreshIcon />
@@ -28,14 +28,7 @@ const Topbar = () => {
         >
           <NotificationsNoneIcon />
         </button>
-        <div className="header__searchbar searchbar">
-          <SearchIcon />
-          <input
-            type="text"
-            placeholder="Search Dashboard"
-            className="searchbar__input"
-          />
-        </div>
+       <Searchbar className="header__searchbar" placeholder="Search dashboard"/>
       </div>
 
       <div className="header__profile profile">
