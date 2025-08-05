@@ -1,0 +1,61 @@
+.salecard {
+  grid-column: 6/9;
+
+  background-color: var(--clr-neutral-100);
+  padding: 2rem 2rem;
+  border-radius: 0.25rem;
+
+  &__amount-wrap {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    justify-content: space-between;
+    gap: 1rem;
+    justify-items: center;
+
+    margin-bottom: 3rem;
+
+    .amount-block {
+      color: var(--clr-neutral-700);
+      display: grid;
+      gap: 3px;
+      &__label {
+        text-transform: uppercase;
+        font-size: 0.8125rem;
+        color: var(--clr-neutral-600);
+      }
+
+      &__figure {
+        font-size: 1.25rem;
+        span {
+          font-weight: 500;
+        }
+      }
+    }
+  }
+
+  &__table-wrap {
+  }
+
+  &__table-header {
+    text-transform: uppercase;
+    color: var(--clr-neutral-700);
+  }
+
+  &__table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 1rem;
+
+    td {
+      padding: 0.75rem;
+      border-block: 1px solid var(--clr-neutral-300);
+      font-weight: 500;
+      color: var(--clr-green-800);
+
+      &:nth-child(2) {
+        color: var(--clr-neutral-600);
+        font-weight: 400;
+      }
+    }
+  }
+}

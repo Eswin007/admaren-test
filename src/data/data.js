@@ -1,0 +1,38 @@
+export const STATS_DATA = [
+  {
+    type: "overallSales",
+    title: "Overall Sales",
+    overallVisits: 2415,
+    todays: 751,
+    monthly: 1547,
+    percentage: 70,
+    summary: 10,
+  },
+  {
+    type: "overallVisits",
+    title: "Overall Visits",
+    overallVisits: 15489,
+    todays: 551,
+    monthly: 1450,
+    percentage: 55,
+    summary: 15,
+  },
+  {
+    type: "serverLoad",
+    title: "Server Load",
+    overallVisits: 5695,
+    todays: 568,
+    monthly: 12459,
+    percentage: 40,
+    summary: 24,
+  },
+  {
+    type: "overallSales2",
+    title: "Overall Sales",
+    overallVisits: 5669,
+    todays: 751,
+    monthly: 1547,
+    percentage: 90,
+    summary: 12,
+  },
+];

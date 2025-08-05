@@ -1,0 +1,45 @@
+.map {
+  display: flex;
+  grid-column: 1/6;
+  border-radius: 0.25rem;
+  overflow: hidden;
+  &__img {
+    max-height: 23rem;
+    overflow: hidden;
+    img {
+      object-fit: cover;
+    }
+  }
+
+  &__control {
+    background-color: var(--clr-neutral-900);
+    padding: 2rem 1rem;
+    min-width: 20rem;
+    color: var(--clr-neutral-100);
+  }
+
+  &__label {
+    text-transform: uppercase;
+    font-size: 0.875rem;
+  }
+
+  &__search {
+    background-color: rgba(black, 0.5);
+    margin-block: 1rem 2rem;
+    input {
+      padding-block: 0.25rem;
+      color: var(--clr-neutral-100);
+    }
+    &:focus-within,
+    &:hover {
+      background-color: rgba(black, 0.8);
+    }
+  }
+
+  &__stat {
+    padding: 0;
+    .stat-card__progress {
+      background-color: var(--clr-green-800);
+    }
+  }
+}
