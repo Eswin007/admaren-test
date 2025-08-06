@@ -1,0 +1,39 @@
+.market{
+    background-color: var(--clr-neutral-100);
+    border-radius: .25rem;
+    padding: 2rem 1rem;
+    display: flex;
+    &__head{
+        display: grid;
+        justify-content: flex-start;
+    }
+
+    &__head-top{
+        display: flex;
+        align-items: center;
+        text-transform: uppercase;
+        font-weight: bold;
+        gap: 1rem;
+        font-size: .875rem;
+        margin-bottom: .5rem;
+
+        div:first-child{
+            color: var(--clr-green-800);
+        }
+    }
+    &__trend{
+        font-size: 2.25rem;
+        font-weight: bold;
+        color: var(--clr-red-800);
+        display: flex;
+        align-items: center;
+    }
+
+    &__value{
+        // padding-left: 1.75rem;
+    }
+
+    &__trend-arrow{
+        transform: scale(1.25);
+    }
+}

@@ -6,12 +6,18 @@ const MarketCard = () => {
     <div className="market">
       <div className="market__summary">
         <div className="market__head">
-          <h5>Market</h5>
-          <h5>Down</h5>
-          <h2>
-            <ArrowDropUpIcon fontSize="large" /> 15580.11
-          </h2>
+          <div className="market__head-top">
+            <div>Market</div>
+            <div>Down</div>
+          </div>
+          <div className="market__trend">
+            <div className="market__trend-arrow">
+              <ArrowDropUpIcon fontSize="large" />
+            </div> 
+            <div className="market__value">15,580.11</div>
+          </div>
         </div>
+        <div className="market__summary-quick"></div>
       </div>
       <div className="market__chart"></div>
       <div className="market__list-wrap">
