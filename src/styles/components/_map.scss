@@ -23,6 +23,10 @@
     min-width: 20rem;
     color: var(--clr-neutral-100);
     position: relative;
+
+    @include respond(smallMobile) {
+      padding-bottom: 8rem;
+    }
   }
 
   &__label {
