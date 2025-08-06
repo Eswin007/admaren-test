@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
 import { MARKET_DATA } from "../data/data";
 import Searchbar from "./other/Searchbar";
+import ChartTemplate from "./other/ChartTemplate";
 
 const MarketListItem = ({
   label1,
@@ -50,7 +51,9 @@ const MarketCard = () => {
           </div>
         </div>
       </div>
-      <div className="market__chart"></div>
+      <div className="market__chart">
+        <ChartTemplate className="market-area-chart" />
+      </div>
       <div className="market__list-wrap">
         <div className="market__list-label">Watchlist</div>
         <Searchbar

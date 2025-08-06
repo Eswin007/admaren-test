@@ -2,6 +2,7 @@ import React from "react";
 import MapImg from "../assets/images/map.jpg";
 import Searchbar from "./other/Searchbar";
 import Statcard from "./StatCard";
+import ChartTemplate from "./other/ChartTemplate";
 const Map = ({ className = "" }) => {
   return (
     <div className={`map ${className}`}>
@@ -21,6 +22,9 @@ const Map = ({ className = "" }) => {
           summary="45"
           //   title={stat.title}
         />
+        <div className="map__chart">
+          <ChartTemplate height={130} color="#3f4655" />
+        </div>
       </div>
     </div>
   );

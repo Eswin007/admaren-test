@@ -82,7 +82,17 @@
   &__chart {
     grid-row: 2/3;
     grid-column: 1/2;
-    background-color: lavender;
+    position: relative;
+    overflow: hidden;
+
+    .market-area-chart {
+      position: absolute;
+      left: -5px;
+      bottom: -5px;
+      width: 103% !important;
+    }
+
+    // background-color: lavender;
   }
 
   &__list-wrap {

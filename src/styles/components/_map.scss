@@ -22,6 +22,7 @@
     padding: 2rem 1rem;
     min-width: 20rem;
     color: var(--clr-neutral-100);
+    position: relative;
   }
 
   &__label {
@@ -47,5 +48,14 @@
     .stat-card__progress {
       background-color: var(--clr-green-800);
     }
+  }
+
+  &__chart {
+    position: absolute;
+    bottom: -5px;
+    z-index: 10;
+    width: 105%;
+    left: -5px;
+    right: -5px;
   }
 }

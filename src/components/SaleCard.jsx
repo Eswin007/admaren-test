@@ -1,4 +1,5 @@
 import React from "react";
+import ChartTemplate from "./other/ChartTemplate";
 
 const AmountSet = ({ label, figure = "NA", currency = "USD" }) => {
   return (
@@ -47,6 +48,9 @@ const SaleCard = () => {
             <TableListItem val1={item.val1} val2={item.val2} val3={item.val3} />
           ))}
         </table>
+      </div>
+      <div className="salecard__chart">
+        <ChartTemplate height={100} color="hsl(0, 87%, 65%)" />
       </div>
     </div>
   );
