@@ -1,8 +1,14 @@
+@use "../utilities/mixins" as *;
 .map {
   display: flex;
-  grid-column: 1/6;
+  grid-area: map;
   border-radius: 0.25rem;
   overflow: hidden;
+
+  @include respond(smallMobile) {
+    flex-direction: column;
+  }
+
   &__img {
     max-height: 23rem;
     overflow: hidden;

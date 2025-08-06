@@ -1,10 +1,59 @@
+@use "../utilities/mixins" as *;
 .dashboard-grid-wrap {
   display: grid;
   grid-template-columns: repeat(8, minmax(0, 1fr));
+
+  grid-template-areas:
+    "statcard1 statcard1 statcard2 statcard2 statcard3 statcard3 statcard4 statcard4"
+    "map map map map map salecard salecard salecard"
+    "bundle bundle bundle fraction fraction market market market"
+    "weather weather weather . . . . .";
   gap: 1rem;
   padding: 1rem;
 
-  .stat-card {
-    grid-column: span 2;
+  @include respond(mediumScreen) {
+    grid-template-areas:
+      "statcard1 statcard1 statcard2 statcard2 statcard3 statcard3 statcard4 statcard4"
+      "map map map map map salecard salecard salecard"
+      "bundle bundle bundle bundle market market market market"
+      "weather weather weather weather weather fraction fraction fraction";
+  }
+
+  @include respond(smallScreen) {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    grid-template-areas:
+      " statcard1 statcard1 statcard2 statcard2"
+      "statcard3 statcard3 statcard4 statcard4"
+      "map  map salecard salecard "
+      "bundle bundle market market"
+      "weather weather fraction fraction";
+  }
+
+  @include respond(smallerScreens) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-areas:
+      "statcard1 statcard2"
+      "statcard3 statcard4"
+      "map map"
+      "salecard salecard"
+      "bundle  bundle"
+      "market market"
+      "weather  weather"
+      "fraction fraction";
+  }
+  @include respond(smallMobile) {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+      "statcard1"
+      "statcard2"
+      "statcard3"
+      "statcard4"
+      "map"
+      "salecard"
+      "bundle"
+      "market"
+      "weather"
+      "fraction";
   }
 }

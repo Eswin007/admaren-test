@@ -1,39 +1,171 @@
-.market{
-    background-color: var(--clr-neutral-100);
-    border-radius: .25rem;
-    padding: 2rem 1rem;
+@use "../utilities/mixins" as *;
+.market {
+  background-color: var(--clr-neutral-100);
+  border-radius: 0.25rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-area: market;
+  height: 500px;
+
+  align-content: flex-start;
+  grid-template-rows: min-content minmax(0, 1fr);
+
+  @include respond(smallMobile) {
+    grid-template-columns: minmax(0, 1fr);
+    height: 700px;
+  }
+  &__head {
+    padding-top: 2rem;
+    display: grid;
+    justify-content: flex-start;
+    padding-inline: 1rem;
+    grid-row: 1/2;
+  }
+
+  &__head-top {
     display: flex;
-    &__head{
-        display: grid;
-        justify-content: flex-start;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    gap: 1rem;
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+    color: var(--clr-neutral-800);
+
+    div:first-child {
+      color: var(--clr-green-800);
+    }
+  }
+  &__trend {
+    font-size: 2.25rem;
+    font-weight: bold;
+    color: var(--clr-red-800);
+    display: flex;
+    align-items: center;
+  }
+
+  &__value {
+    // padding-left: 1.75rem;
+  }
+
+  &__trend-arrow {
+    transform: scale(1.25) translateX(3px);
+  }
+
+  &__summary {
+    align-self: flex-start;
+    height: fit-content;
+    display: block;
+  }
+
+  &__summary-quick {
+    display: flex;
+    padding-block: 1.5rem;
+    margin-top: 1rem;
+    font-size: 0.875rem;
+    border-block: 1px solid var(--clr-neutral-300);
+    padding-inline: 1rem;
+
+    div {
+      display: grid;
+      gap: 0.5rem;
+      flex: 1;
+      width: 100%;
+      color: var(--clr-neutral-800);
+
+      label {
+        color: var(--clr-green-800);
+      }
+    }
+  }
+
+  &__chart {
+    grid-row: 2/3;
+    grid-column: 1/2;
+    background-color: lavender;
+  }
+
+  &__list-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding-top: 2rem;
+    grid-row: 1/3;
+    overflow: hidden;
+    border-left: 1px solid var(--clr-neutral-300);
+
+    @include respond(smallMobile) {
+      grid-row: 3/4;
+      border-left: 0;
+    }
+  }
+  &__list {
+    height: 100%;
+
+    overflow: auto;
+    border-top: 1px solid var(--clr-neutral-300);
+    &::-webkit-scrollbar {
+      width: 4px;
+    }
+    &::-webkit-scrollbar-track {
+      background-color: transparent;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--clr-neutral-300);
+      border-radius: 100vmax;
+    }
+  }
+
+  &__list-label {
+    padding-inline: 1rem;
+    font-size: 1.125rem;
+  }
+
+  &__search {
+    margin-inline: 1rem;
+    background-color: var(--clr-neutral-200);
+    &:hover,
+    &:focus-within {
+      background-color: var(--clr-neutral-300);
+    }
+    input {
+      padding-block: 0.5rem;
+    }
+  }
+
+  .market-list-item {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, max-content));
+    color: var(--clr-neutral-800);
+    grid-row-gap: 1.25rem;
+    padding: 1rem;
+    font-size: 0.875rem;
+    border-bottom: 1px solid var(--clr-neutral-300);
+    justify-content: space-between;
+
+    .label1,
+    .label2 {
+      color: var(--clr-neutral-600);
     }
 
-    &__head-top{
-        display: flex;
-        align-items: center;
-        text-transform: uppercase;
-        font-weight: bold;
-        gap: 1rem;
-        font-size: .875rem;
-        margin-bottom: .5rem;
-
-        div:first-child{
-            color: var(--clr-green-800);
-        }
-    }
-    &__trend{
-        font-size: 2.25rem;
-        font-weight: bold;
-        color: var(--clr-red-800);
-        display: flex;
-        align-items: center;
+    .value {
+      font-size: 1.125rem;
     }
 
-    &__value{
-        // padding-left: 1.75rem;
-    }
+    .chip-value {
+      justify-self: flex-end;
+      display: grid;
+      place-content: center;
+      background-color: var(--clr-green-800);
+      color: var(--clr-neutral-100);
+      padding: 2px 0.5rem;
+      border-radius: 0.25rem;
+      font-size: 0.75rem;
+      font-weight: 600;
 
-    &__trend-arrow{
-        transform: scale(1.25);
+      &.minus {
+        background-color: var(--clr-red-800);
+      }
     }
+  }
 }

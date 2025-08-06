@@ -4,17 +4,21 @@
 
   &.overallSales {
     background-color: #0aa699;
+    grid-area: statcard1;
   }
 
   &.overallVisits {
     background-color: #0090d9;
+    grid-area: statcard2;
   }
   &.overallSales2 {
     background-color: #f35958;
+    grid-area: statcard3;
   }
 
   &.serverLoad {
     background-color: #735f87;
+    grid-area: statcard4;
   }
 
   &__header {
